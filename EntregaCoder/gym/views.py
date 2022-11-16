@@ -35,10 +35,10 @@ def buscador_piernas (request):
 
 
 def resultado_piernas (request):
-    nombre_maquina = request.GET ["maquina_piernas"]
-    maquina = piernas.objects.filter (maquina__icontains=nombre_maquina)
+    nombre= request.GET ["nombre_ejercicio"]
+    ejercicios = piernas.objects.filter (nombre_ejercicio__icontains=nombre)
 
-    return render (request, 'gym/resultado_search_piernas.html', {'maquina': maquina})
+    return render (request, 'gym/resultado_piernas.html', {'ejercicios': ejercicios})
 
 
 
@@ -58,14 +58,22 @@ def form_espalda (request):
     return render(request, 'gym/form_espalda.html', contexto)
 
 def vista_espalda (request):
-
     return render (request, 'gym/espalda.html')
+
+
+
 
 def buscador_espalda (request):
     return render (request, 'gym/buscador_espalda.html')
 
+
 def resultado_espalda (request):
-    pass
+    nombre= request.GET ["nombre_ejercicio"]
+    ejercicios = espalda.objects.filter (nombre_ejercicio__icontains=nombre)
+
+    return render (request, 'gym/resultado_espalda.html', {'ejercicios': ejercicios})
+
+
 
 
 
@@ -94,5 +102,9 @@ def vista_pecho (request):
 def buscador_pecho (request):
     return render (request, 'gym/buscador_pecho.html')
 
-def resultado_pecho(request):
-    pass
+
+def resultado_pecho (request):
+    nombre= request.GET ["nombre_ejercicio"]
+    ejercicios = pecho.objects.filter (nombre_ejercicio__icontains=nombre)
+
+    return render (request, 'gym/resultado_pecho.html', {'ejercicios': ejercicios})

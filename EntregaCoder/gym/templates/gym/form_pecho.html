@@ -1,12 +1,12 @@
 {%extends 'gym/base.html'%}
 {%block contenido%}
-<h2> Esta es la seccion para que armes tu rutina de pecho declinado</h2>
+<h2> Esta es la seccion para que cargues tu ejercicio de pecho </h2>
 <p>Completa el siguiente formulario: </p>
 <form action="" method="post">
     {% csrf_token %}
     {{formulario.as_p}}
 
-    <input type="submit" value="Cargar Rutina">
+    <input type="submit" value="Cargar ejercicio">
 
 <endform>
 {%endblock%}

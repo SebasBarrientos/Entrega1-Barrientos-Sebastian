@@ -1,0 +1,19 @@
+{%extends 'gym/base.html'%}
+{%block contenido%}
+<h2> Resultados:</h2>
+<ul>
+    {%for ejercicio in ejercicios %}
+
+<li> 
+    Nombre del ejercicio: {{ejercicio.nombre_ejercicio}}<br>
+    Maquina o elemento a utilizar:{{ejercicio.maquina}} <br>
+    Peso (kg): {{ejercicio.peso}}<br>
+    R/S: {{ejercicio.repeticiones}} X {{ejercicio.series}}
+
+</li>
+
+</ul>
+    {%endfor%}
+
+
+{%endblock%}

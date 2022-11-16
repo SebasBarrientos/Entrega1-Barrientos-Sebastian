@@ -1,14 +1,15 @@
 {%extends 'gym/base.html'%}
 {%block contenido%}
-<h2> Esta es la seccion para que busques tu rutina de pecho plano</h2>
+<h2> Esta es la seccion para que busques tus ejercicios de piernas</h2>
 
-<form action="{% url 'pecho_plano-resultado'%}" method="get">
+<form action="{% url 'piernas-resultado'%}" method="get">
 
     <p>
-        Nombre de la maquina: <input type="text" name="maquina_pecho_plano">
+        Nombre del ejercicio: <input type="text" name="nombre_ejercicio">
         <input type="submit" value = "Buscar">
     </p>
     
+</form>
 
 
 {%endblock%}
