@@ -30,8 +30,15 @@ def form_pecho_plano (request):
 def vista_pecho_plano (request):
     return render (request, 'gym/pecho_plano.html')
 
-def search_pecho_plano (request):
-    pass
+def buscador_pecho_plano (request):
+    return render (request, 'gym/buscador_pecho_plano.html')
+
+
+def resultado_pecho_plano (request):
+    nombre_maquina = request.GET ["maquina_pecho_plano"]
+    maquina = pecho_plano.objects.filter (maquina__icontains=nombre_maquina)
+
+    return render (request, 'gym/resultado_search_pecho_plano.html', {'maquina': maquina})
 
 
 
@@ -50,15 +57,15 @@ def form_pecho_inclinado (request):
     contexto = {'formulario': formulario}
     return render(request, 'gym/form_pecho_inclinado.html', contexto)
 
-
 def vista_pecho_inclinado (request):
 
     return render (request, 'gym/pecho_inclinado.html')
 
+def buscador_pecho_inclinado (request):
+    return render (request, 'gym/buscador_pecho_inclinado.html')
 
-def search_pecho_inclinado (request):
+def resultado_pecho_inclinado (request):
     pass
-
 
 
 
@@ -84,5 +91,8 @@ def vista_pecho_declinado (request):
 
     return render (request, 'gym/pecho_declinado.html')
 
-def search_pecho_declinado (request):
+def buscador_pecho_declinado (request):
+    return render (request, 'gym/buscador_pecho_declinado.html')
+
+def resultado_pecho_declinado(request):
     pass

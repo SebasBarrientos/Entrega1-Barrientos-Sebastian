@@ -1,0 +1,15 @@
+{%extends 'gym/base.html'%}
+{%block contenido%}
+<h2> Esta es la seccion para que busques tu rutina de pecho inclinado</h2>
+
+<form action="{% url 'pecho_inclinado-resultado'%}" method="get">
+
+    <p>
+        Nombre de la maquina: <input type="text" name="maquina_pecho_inclinado">
+        <input type="submit" value = "Buscar">
+    </p>
+    
+
+
+
+{%endblock%}

@@ -1,0 +1,11 @@
+{%extends 'gym/base.html'%}
+{%block contenido%}
+<h2> Resultados:</h2>
+<form action="{% url 'coder-pecho_declinado-search %}"
+    method="get">
+    <p>Maquina: <input type="text" name="maquina"><input type="submit" value="Buscar!"></p>
+</form>
+
+
+
+{%endblock%}
