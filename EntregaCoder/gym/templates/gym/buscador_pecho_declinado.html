@@ -1,0 +1,11 @@
+{%extends 'gym/base.html'%}
+{%block contenido%}
+<h2> Esta es la seccion para que busques tu rutina de pecho declinado</h2>
+<form action="{% url 'coder-pecho_inclinado-search %}"
+    method="get">
+    <p>Nombre del curso: <input type="text" name="rutina"><input type="submit" value="Buscar!"></p>
+</form>
+
+
+
+{%endblock%}
